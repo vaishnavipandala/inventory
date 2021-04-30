@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <title>Blood Bank</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 class="c1">BloodBank</h1>
+
+    <h3><a href="/create" class ="c2">Add New donor</a></h3>
+    <h3><a href="/update" class ="c2">Update Existing Info</a></h3>
+    <h3><a href="/delete" class ="c2">Delete donor Information</a></h3>
+    <h2> Welcome </h2>
+    <p>
+
+            Today, most medical care depends on a steady supply of blood from donors,
+             as one in seven people entering the hospital need blood. 
+             As cancer care increases, so does the demand for blood and platelet donations.
+              An adequate amount of blood is needed in all health care facilities 
+              to meet the urgent need for patients facing trauma and other lifesaving procedures,
+               such as blood transfusions – which saves millions of lives each year. 
+         </p>
+
+<center>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>name</th> 
+            <th>type</th>
+            <th>quantity</th>
+            <th>location</th>
+            <th>phone number</th> 
+            
+        </tr>
+        <%for(var i=0;i<data.length;i++){%>
+            <tr>
+                <td><%= data[i].id%></td>
+                 <td><%= data[i].name%></td>
+                  <td><%= data[i].type%></td>
+                   <td><%= data[i].quantity%></td>
+                   <td><%= data[i].location%></td>
+                   <td><%= data[i].ph_no%></td>
+            </tr>
+        <%}%>
+    </table>
+</center>
+<footer>
+    &copy Copyright 2021 . 
+</footer>
+</body>
+
+</html>
